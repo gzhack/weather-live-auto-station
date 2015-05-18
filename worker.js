@@ -15,7 +15,7 @@ var isExist = function(str) {
   }
 };
 
-var job = new CronJob('0 '+ _.range(0, 60, 1).join(',') +' * * * *', function() {
+var job = new CronJob('0 '+ _.range(0, 60, 3).join(',') +' * * * *', function() {
   request.get({
     url: 'http://www.tqyb.com.cn/data/gzWeather/obtDatas.js',
   }, function(err, res, body) {
